@@ -13,7 +13,19 @@
         android:theme="@style/Theme.Android12"
         tools:targetApi="31">
         <activity
+            android:name="LEVANCUONG.SuggestedSubjects"
+            android:exported="false" />
+        <activity
+            android:name="LEVANCUONG.StudyPlan"
+            android:exported="false" />
+        <activity
+            android:name="LEVANCUONG.ReportingAdvisor"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
