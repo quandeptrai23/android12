@@ -132,10 +132,7 @@ public class StatisticalActivity extends AppCompatActivity {
             });
             return true;
         }
-        else if (id==R.id.action_close) {
-            finish();
-            return true;
-        }
+
         else
             return super.onOptionsItemSelected(item);
     }

@@ -55,10 +55,12 @@ public class ResultActivity extends AppCompatActivity {
         //vd4 set back button
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Theo dõi kết quả học tập");
+        actionBar.setDisplayHomeAsUpEnabled(true);  // Hiển thị mũi tên quay lại
+
         listView=findViewById(R.id.lv);
         spinner=findViewById(R.id.sp);
         btn_TBC=findViewById(R.id.btnTBC);
-        String[] arrKy=new String[]{" Tất cả"," 1"," 2","3"," 4"," 5"," 6"};
+        String[] arrKy=new String[]{"Tất cả","   1","   2","   3","   4","   5","   6","   7","   8"};
          arrayAdapter1=new ArrayAdapter(ResultActivity.this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,arrKy);
         arrayAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(arrayAdapter1);
@@ -244,7 +246,6 @@ public class ResultActivity extends AppCompatActivity {
 
     private void onclickMenu() {
         registerForContextMenu(btn_TBC);
-
     }
 
     private void clickSpinner() {
@@ -380,6 +381,12 @@ public class ResultActivity extends AppCompatActivity {
         ok_btn = (Button) alertCustomDialog.findViewById(R.id.ok_btn_id);
         final  AlertDialog dialog = alertDialog.create();
         int id = item.getItemId();
+
+        if (item.getItemId() == android.R.id.home) {
+            // Xử lý khi nhấn nút mũi tên
+            finish();
+            return true;
+        }
         if (id==R.id.action_report) {
             dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             dialog.show();
@@ -396,10 +403,6 @@ public class ResultActivity extends AppCompatActivity {
                     Toast.makeText(ResultActivity.this, "Cảm ơn bạn đã phản hồi.Báo cáo đã được gửi đến nhà phát triển.", Toast.LENGTH_SHORT).show();
                 }
             });
-            return true;
-        }
-        else if (id==R.id.action_close) {
-            finish();
             return true;
         }
         else
