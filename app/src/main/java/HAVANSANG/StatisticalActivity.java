@@ -36,20 +36,22 @@ public class StatisticalActivity extends AppCompatActivity {
         //vd4 set back button
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Thống kê");
+        actionBar.setDisplayHomeAsUpEnabled(true);
         sA=findViewById(R.id.sA);
         sBB=findViewById(R.id.sBB);
         sB=findViewById(R.id.sB);
         sCC=findViewById(R.id.sCC);
         sC=findViewById(R.id.sC);
-        sDD=findViewById(R.id.sĐ);
+        sDD=findViewById(R.id.sDD);
         sD=findViewById(R.id.sD);
         sF=findViewById(R.id.sF);
-        tA=findViewById(R.id.sA);
-        tBB=findViewById(R.id.sBB);
-        tB=findViewById(R.id.sB);
+
+        tA=findViewById(R.id.tA);
+        tBB=findViewById(R.id.tBB);
+        tB=findViewById(R.id.tB);
         tCC=findViewById(R.id.tCC);
         tC=findViewById(R.id.tC);
-        tDD=findViewById(R.id.tĐ);
+        tDD=findViewById(R.id.tDD);
         tD=findViewById(R.id.tD);
         tF=findViewById(R.id.tF);
 
@@ -63,14 +65,15 @@ public class StatisticalActivity extends AppCompatActivity {
         int SBB=intent11.getIntExtra("SBB",1);
         int SCC=intent11.getIntExtra("SCC",1);
         int SDD=intent11.getIntExtra("SDD",1);
-        int TA=intent11.getIntExtra("TA",1);
-        int TB=intent11.getIntExtra("TB",1);
-        int TC=intent11.getIntExtra("TC",1);
-        int TD=intent11.getIntExtra("TD",1);
-        int TF=intent11.getIntExtra("TF",1);
-        int TBB=intent11.getIntExtra("TBB",1);
-        int TCC=intent11.getIntExtra("TCC",1);
-        int TDD=intent11.getIntExtra("TDD",1);
+
+        double TA=intent11.getDoubleExtra("TA",1);
+        double TB=intent11.getDoubleExtra("TB",1);
+        double TC=intent11.getDoubleExtra("TC",1);
+        double TD=intent11.getDoubleExtra("TD",1);
+        double TF=intent11.getDoubleExtra("TF",1);
+        double TBB=intent11.getDoubleExtra("TBB",1);
+        double TCC=intent11.getDoubleExtra("TCC",1);
+        double TDD=intent11.getDoubleExtra("TDD",1);
 
 //        sA.setText(""+SA);
 //        sB.setText(""+SB);
@@ -114,6 +117,11 @@ public class StatisticalActivity extends AppCompatActivity {
         ok_btn = (Button) alertCustomDialog.findViewById(R.id.ok_btn_id);
         final  AlertDialog dialog = alertDialog.create();
         int id = item.getItemId();
+        if (item.getItemId() == android.R.id.home) {
+            // Xử lý khi nhấn nút mũi tên
+            finish();
+            return true;
+        }
         if (id==R.id.action_report) {
             dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             dialog.show();

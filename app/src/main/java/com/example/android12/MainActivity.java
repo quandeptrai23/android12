@@ -263,6 +263,8 @@ public class MainActivity extends AppCompatActivity {
                 String select4="SELECT tenMonDangKy,diemTongKetChu,kyHoc FROM tblMonDangKy  WHERE idSinhVien = "+s+" AND kyHoc = 4";
                 String select5="SELECT tenMonDangKy,diemTongKetChu,kyHoc FROM tblMonDangKy  WHERE idSinhVien = "+s+" AND kyHoc = 5";
                 String select6="SELECT tenMonDangKy,diemTongKetChu,kyHoc FROM tblMonDangKy  WHERE idSinhVien = "+s+" AND kyHoc = 6";
+                String select7="SELECT tenMonDangKy,diemTongKetChu,kyHoc FROM tblMonDangKy  WHERE idSinhVien = "+s+" AND kyHoc = 7";
+                String select8="SELECT tenMonDangKy,diemTongKetChu,kyHoc FROM tblMonDangKy  WHERE idSinhVien = "+s+" AND kyHoc = 8";
 
                 String selectChiTiet= "SELECT " +
                         "mdk.tenMonDangKy, " +
@@ -290,6 +292,8 @@ public class MainActivity extends AppCompatActivity {
                 Cursor c4=db.rawQuery(select4,null);
                 Cursor c5=db.rawQuery(select5,null);
                 Cursor c6=db.rawQuery(select6,null);
+                Cursor c7=db.rawQuery(select7,null);
+                Cursor c8=db.rawQuery(select8,null);
                 Cursor c2=db.rawQuery(selectChiTiet,null);
 
                 RegistedSubjectObject[] arrMonDangKy_all=new RegistedSubjectObject[c.getCount()];
@@ -299,6 +303,8 @@ public class MainActivity extends AppCompatActivity {
                 RegistedSubjectObject[] arrMonDangKy4=new RegistedSubjectObject[c4.getCount()];
                 RegistedSubjectObject[] arrMonDangKy5=new RegistedSubjectObject[c5.getCount()];
                 RegistedSubjectObject[] arrMonDangKy6=new RegistedSubjectObject[c6.getCount()];
+                RegistedSubjectObject[] arrMonDangKy7=new RegistedSubjectObject[c7.getCount()];
+                RegistedSubjectObject[] arrMonDangKy8=new RegistedSubjectObject[c8.getCount()];
                 ResultObject[] arrChiTiet=new ResultObject[c2.getCount()];
                 int i=0,h=0,q=0,l=0,z=0;
                 int a=0;
@@ -345,6 +351,22 @@ public class MainActivity extends AppCompatActivity {
                     arrMonDangKy6[g]= new RegistedSubjectObject(tenMonDangKy,diemTongKetChu,kyHoc);
                     g++;
                 }
+                g=0;
+                while (c7.moveToNext()){
+                    @SuppressLint("Range") String tenMonDangKy= c6.getString(c6.getColumnIndex("tenMonDangKy"));
+                    @SuppressLint("Range") String diemTongKetChu=c6.getString(c6.getColumnIndex("diemTongKetChu"));
+                    @SuppressLint("Range") Float kyHoc=c6.getFloat(c6.getColumnIndex("kyHoc"));
+                    arrMonDangKy7[g]= new RegistedSubjectObject(tenMonDangKy,diemTongKetChu,kyHoc);
+                    g++;
+                }
+                g=0;
+                while (c8.moveToNext()){
+                    @SuppressLint("Range") String tenMonDangKy= c6.getString(c6.getColumnIndex("tenMonDangKy"));
+                    @SuppressLint("Range") String diemTongKetChu=c6.getString(c6.getColumnIndex("diemTongKetChu"));
+                    @SuppressLint("Range") Float kyHoc=c6.getFloat(c6.getColumnIndex("kyHoc"));
+                    arrMonDangKy8[g]= new RegistedSubjectObject(tenMonDangKy,diemTongKetChu,kyHoc);
+                    g++;
+                }
 
 
                 while (c22.moveToNext()){
@@ -381,6 +403,8 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("data4",arrMonDangKy4);
                 intent.putExtra("data5",arrMonDangKy5);
                 intent.putExtra("data6",arrMonDangKy6);
+                intent.putExtra("data7",arrMonDangKy7);
+                intent.putExtra("data8",arrMonDangKy8);
                 intent.putExtra("data10",arrChiTiet);
                 startActivity(intent);
             }
