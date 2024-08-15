@@ -55,28 +55,13 @@ public class MainActivity extends AppCompatActivity {
         }
         txtUsername.setText(username);
         getBack();
-
     }
-
     private void appTeacher() {
         btnEvaluate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent  intentWarning  = new Intent(MainActivity.this, ReportingAdvisor.class);
                 startActivity(intentWarning);
-            }
-        });
-        btnChat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
-                emailIntent.setData(Uri.parse("mailto:"));
-
-                try {
-                    startActivity(emailIntent);
-                } catch (android.content.ActivityNotFoundException ex) {
-                    // Handle case where no email app is available
-                }
             }
         });
         imageAnother.setOnClickListener(new View.OnClickListener() {
@@ -112,35 +97,10 @@ public class MainActivity extends AppCompatActivity {
         //
         helper = new DBHelper(this);
         helper.getReadableDatabase();
-//        clickInsert();
         Intent  intent=getIntent();
         Integer gSV=intent.getIntExtra("idSinhVien",1);
         String maSV=gSV.toString();
-//        clickResult(maSV);
-        //Timetable
-//        imageTimetable.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intentTimetbable = new Intent(MainActivity.this, Timetable.class);
-//                startActivity(intentTimetbable);
-//            }
-//        });
-        //document
-//        imageDocument.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intentDocument = new Intent(MainActivity.this, Document.class);
-//                startActivity(intentDocument);
-//            }
-//        });
-        //mesage to teacher
-//        imageMessage.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intentMesage = new Intent(MainActivity.this, Message.class);
-//                startActivity(intentMesage);
-//            }
-//        });
+
         //Study plane
         imageStudyplane.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -149,7 +109,6 @@ public class MainActivity extends AppCompatActivity {
                 intentStudyplane.putExtra("IDSV",getSV.getID()+"");
                 startActivity(intentStudyplane);
             }
-
         });
         imageSugsub.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -186,7 +145,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intentImplicit1);
             }
         });
-
     }
 
     private void getWidgetStudent() {
@@ -237,7 +195,6 @@ public class MainActivity extends AppCompatActivity {
                 });
                 backRequest.create().show();
             }
-
         });
     }
     //Thông báo tính năng đang trong quá trình phát triển
