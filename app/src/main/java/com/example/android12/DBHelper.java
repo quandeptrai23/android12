@@ -137,7 +137,6 @@ public class DBHelper extends SQLiteOpenHelper {
         }
     }
 
-    //Vũ Xuân Điệp table Thời khoá biểu
     private void createTableThoiKhoaBieu(SQLiteDatabase db){
         try{
             String tblThoiKhoaBieu = "CREATE TABLE tblThoiKhoaBieu" +
@@ -183,7 +182,6 @@ public class DBHelper extends SQLiteOpenHelper {
             Log.e("Error","There are some problems!");
         }
     }
-    ///BuiTienDung
     private void createTableMonDangKy(SQLiteDatabase db){
         try{
             String createtableMonDangKy= "CREATE TABLE tblMonDangKy ("+
