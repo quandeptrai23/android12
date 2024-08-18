@@ -18,8 +18,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.btlptdd.LuuTruTaiLieu.LuuTruTaiLieuObject;
-import com.example.btlptdd.R;
+import com.example.android12.LuuTruTaiLieu.LuuTruTaiLieuObject;
+import com.example.android12.R;
 
 import java.util.ArrayList;
 

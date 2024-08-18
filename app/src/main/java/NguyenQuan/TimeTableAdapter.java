@@ -11,8 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.btlptdd.R;
-import com.example.btlptdd.ThoiKhoaBieu.ThoiKhoaBieuObject;
+import com.example.android12.R;
+import com.example.android12.ThoiKhoaBieu.ThoiKhoaBieuObject;
 
 import java.util.ArrayList;
 

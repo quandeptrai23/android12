@@ -20,13 +20,13 @@ import android.widget.Toast;
 import com.example.android12.SinhVien.SinhVienDAO;
 import com.example.android12.SinhVien.SinhVienObject;
 
-import A.ResultObject;
-import A.RegistedSubjectObject;
-import A.ResultActivity;
-import B.Message;
-import C.ReportingAdvisor;
-import C.StudyPlan;
-import C.SuggestedSubjects;
+import HaVanSang.ResultObject;
+import HaVanSang.RegistedSubjectObject;
+import HaVanSang.ResultActivity;
+import HVHuy.Message;
+import LVCuong.ReportingAdvisor;
+import LVCuong.StudyPlan;
+import LVCuong.SuggestedSubjects;
 import NguyenQuan.Document;
 import NguyenQuan.Timetable;
 
