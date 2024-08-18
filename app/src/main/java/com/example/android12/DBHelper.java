@@ -16,21 +16,25 @@ public class DBHelper extends SQLiteOpenHelper {
         super(context,dbName,null,dbVersion);
         this.context=context;
     }
+    public DBHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+        super(context, name, factory, version);
+        this.context = context;
+    }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-            createTableTaiKhoan(db);
-            createTableSinhVien(db);
-            createTableHocPhan(db);
-            createTableKH(db);
-            createTableChiTietKH(db);
-            createTableCVHT(db);
-            createtblCVHT_HP(db);
-            createTableThoiKhoaBieu(db);
-            createTableTaiLieu(db);
-            createTableLuuTruTaiLieu(db);
-            //
-            createTableMonDangKy(db);
+        createTableTaiKhoan(db);
+        createTableSinhVien(db);
+        createTableHocPhan(db);
+        createTableKH(db);
+        createTableChiTietKH(db);
+        createTableCVHT(db);
+        createtblCVHT_HP(db);
+        createTableThoiKhoaBieu(db);
+        createTableTaiLieu(db);
+        createTableLuuTruTaiLieu(db);
+        //
+        createTableMonDangKy(db);
         createtableDiemThanhPhan(db);
     }
 
@@ -137,6 +141,7 @@ public class DBHelper extends SQLiteOpenHelper {
         }
     }
 
+    // table Thời khoá biểu
     private void createTableThoiKhoaBieu(SQLiteDatabase db){
         try{
             String tblThoiKhoaBieu = "CREATE TABLE tblThoiKhoaBieu" +
@@ -231,5 +236,10 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         super.onDowngrade(db, oldVersion, newVersion);
+    }
+
+
+    public static SQLiteDatabase getTestDatabase(Context context) {
+        return new DBHelper(context).getWritableDatabase();
     }
 }
