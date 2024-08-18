@@ -6,14 +6,59 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/manage"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Android12"
+        android:theme="@style/Theme.Assert"
         tools:targetApi="31">
+        <!--        <activity-->
+        <!--            android:name="BUITIENDUNG.MyAdapterResult"-->
+        <!--            android:exported="false" />-->
+        <!--        <activity-->
+        <!--            android:name="BUITIENDUNG.MyResult"-->
+        <!--            android:exported="false" />-->
+        <activity
+            android:name="HaVanSang.ResultActivity"
+            android:exported="false" />
+        <activity
+            android:name="HaVanSang.SecondActivity"
+            android:exported="false" />
+        <activity
+            android:name="HaVanSang.StatisticalActivity"
+            android:exported="false" />
+        <activity
+            android:name="HVHuy.ConsultantDetail"
+            android:exported="false" />
+        <activity
+            android:name="HVHuy.ConsultantContact"
+            android:exported="false" />
+        <activity
+            android:name="LVCuong.SuggestedSubjects"
+            android:exported="false" />
+        <activity
+            android:name="LVCuong.StudyPlan"
+            android:exported="false" />
+        <activity
+            android:name="HVHuy.Message"
+            android:exported="false" />
+        <activity
+            android:name="NguyenQuan.SaveDocument"
+            android:exported="false" />
+        <activity
+            android:name="NguyenQuan.Document"
+            android:exported="false" />
+        <activity
+            android:name="NguyenQuan.Timetable"
+            android:exported="false" />
+        <activity
+            android:name="LVCuong.ReportingAdvisor"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

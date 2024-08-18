@@ -6,7 +6,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.btlptdd.DBHelper;
+import com.example.android12.DBHelper;
 
 import java.util.ArrayList;
 import java.util.List;
