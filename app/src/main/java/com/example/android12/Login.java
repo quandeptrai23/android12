@@ -51,7 +51,7 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        processCopy();
+        //processCopy();
         taiKhoanDAO = new TaiKhoanDAO(this);
         //
         sinhVienDAO = new SinhVienDAO(this);
