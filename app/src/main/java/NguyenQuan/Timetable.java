@@ -111,7 +111,7 @@ public class Timetable extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     dialog.cancel();
-                    Toast.makeText(Timetable.this, "Cảm ơn bạn đã phản hồi.Báo cáo đã được gửi đến nhà phát triển.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Timetable.this, "Cảm ơn bạn đã phản hồi.Báo cáo đã được gửi.", Toast.LENGTH_SHORT).show();
                 }
             });
             return true;

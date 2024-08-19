@@ -9,4 +9,12 @@
         android:id="@+id/action_close"
         android:title="Quay trở lại"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_add"
+        android:title="Thêm"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_edit"
+        android:title="Sửa"
+        app:showAsAction="never" />
 </menu>

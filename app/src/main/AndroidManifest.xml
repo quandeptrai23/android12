@@ -12,12 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Assert"
         tools:targetApi="31">
-        <!--        <activity-->
-        <!--            android:name="BUITIENDUNG.MyAdapterResult"-->
-        <!--            android:exported="false" />-->
-        <!--        <activity-->
-        <!--            android:name="BUITIENDUNG.MyResult"-->
-        <!--            android:exported="false" />-->
         <activity
             android:name="HaVanSang.ResultActivity"
             android:exported="false" />

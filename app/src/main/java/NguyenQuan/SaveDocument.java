@@ -27,7 +27,7 @@ public class SaveDocument extends AppCompatActivity {
 
     private LinearLayoutManager linearLayoutManager;
     private ArrayList<LuuTruTaiLieuObject> list;
-    private  SaveDocumentAdapter savedocumentAdapter;
+    private SaveDocumentAdapter savedocumentAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,4 +71,6 @@ public class SaveDocument extends AppCompatActivity {
         else
             return super.onOptionsItemSelected(item);
     }
+
+
 }

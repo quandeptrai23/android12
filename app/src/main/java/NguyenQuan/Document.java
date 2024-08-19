@@ -27,7 +27,7 @@ public class Document extends AppCompatActivity {
     private LinearLayoutManager linearLayoutManager;
     private ArrayList<DocumentObject> list;
     private SearchView searchView;
-    private  DocumentAdapter documentAdapter;
+    private DocumentAdapter documentAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,12 +86,17 @@ public class Document extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id==R.id.action_save) {
-           Intent  save = new Intent(Document.this,SaveDocument.class);
+           Intent  save = new Intent(Document.this, SaveDocument.class);
            startActivity(save);
             return true;
         }
         else if (id==R.id.action_close) {
             finish();
+            return true;
+        }
+        else if (id==R.id.action_add) {
+            Intent add = new Intent(Document.this, AddDocumentActivity.class);
+            startActivity(add);
             return true;
         }
         else
