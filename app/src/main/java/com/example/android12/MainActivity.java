@@ -204,22 +204,22 @@ public class MainActivity extends AppCompatActivity {
         db=helper.getWritableDatabase();
         //sv05
         try{
-            db.execSQL(insert,new String[]{"GT","Giải Tích","Đã Hoàn Thành","B+","9.1","1","Tốt","2.0","1.0","3.0","0%","5","LP001GT001"});
-            db.execSQL(insert,new String[]{"THMLN","Triết Học Mác-Lênin","Học Lại","C","5.9","1","Trung Bình","3.0","0.0","3.0","25%","5","LP001THMLN006"});
-            db.execSQL(insert,new String[]{"BR1","Bóng Rổ 1","Đã Hoàn Thành","D+","4.7","1","Trung Bình","2.0","1.0","3.0","10%","5","LP001GT004"});
-            db.execSQL(insert,new String[]{"GTLVH","Giao Tiếp Liên Văn Hóa","Đã Hoàn Thành","B+","7.7","1","Tốt","2.0","1.0","3.0","0%","5","LP001GT001"});
-            db.execSQL(insert,new String[]{"NMVKT","Nhập Môn Về Kĩ Thuật","Đã Hoàn Thành","A","8.5","1","Tốt","3.0","0.0","3.0","5%","5","LP001GT001"});
-            db.execSQL(insert,new String[]{"TACNTTCB1","Tiếng Anh Công Nghệ Thông Tin Cơ Bản 1","Đã Hoàn Thành","B+","7.7","1","Tốt","3.0","0.0","3.0","10%","5","LP001GT002"});
-            db.execSQL(insert,new String[]{"DSTT","Đại Số Tuyến Tính","Đã Hoàn Thành","B+","7.9","2","Tốt","2.0","1.0","3.0","5%","5","LP001GT007"});
-            db.execSQL(insert,new String[]{"KTS","Kĩ Thuật Số","Đã Hoàn Thành","B+","7.7","2","Tốt","3.0","0.0","3.0","0%","5","LP001KTS003"});
-            db.execSQL(insert,new String[]{"KTLT","Kĩ Thuật Lập Trình","Đã Hoàn Thành","A","8.7","2","Tốt","2.0","1.0","3.0","25%","5","LP001KTLT009"});
-            db.execSQL(insert,new String[]{"KTCTMLN","Kinh Tế Chính Trị Mác-Lênin","Đã Hoàn Thành","C+","5.7","2","Trung Bình","3.0","0.0","3.0","10%","5","LP001KTCTMLN001"});
-            db.execSQL(insert,new String[]{"MMT","Mạng Máy Tính","Đã Hoàn Thành","A","8.7","3","Tốt","3.0","0.0","3.0","0%","5","LP003MMT003"});
-            db.execSQL(insert,new String[]{"PTTKPM","Phân Tích Thiết Kế Phần Mềm","Đã Hoàn Thành","C+","6.7","3","Tốt","2.0","1.0","3.0","5%","5","LP001PTTK009"});
-            db.execSQL(insert,new String[]{"TTHCM","Tư Tưởng Hồ Chí Minh","Đã Hoàn Thành","D+","4.7","3","Trung Bình","3.0","0.0","3.0","10%","5","LP001TT001"});
-            db.execSQL(insert,new String[]{"ANM","An Ninh Mạng","Đã Hoàn Thành","B","7","3","Tốt","2.0","1.0","3.0","5%","5","LP001AN001"});
-            db.execSQL(insert,new String[]{"PTDA","Phát Triển Dự Áń","Đã Hoàn Thành","B+","7.7","3","Tốt","3.0","0.0","3.0","0%","5","LP001KSS003"});
-            db.execSQL(insert,new String[]{"PT","Lập Trình PyThon","Đã Hoàn Thành","A","9.7","3","Tốt","2.0","1.0","3.0","25%","5","LP001KTLT009"});
+            db.execSQL(insert,new String[]{"GT","Giải Tích","Đã Hoàn Thành","B+","9.1","1","Tốt","2.0","1.0","3.0","0%","3","LP001GT001"});
+            db.execSQL(insert,new String[]{"THMLN","Triết Học Mác-Lênin","Học Lại","C","5.9","1","Trung Bình","3.0","0.0","3.0","25%","3","LP001THMLN006"});
+            db.execSQL(insert,new String[]{"BR1","Bóng Rổ 1","Đã Hoàn Thành","D+","4.7","1","Trung Bình","2.0","1.0","3.0","10%","3","LP001GT004"});
+            db.execSQL(insert,new String[]{"GTLVH","Giao Tiếp Liên Văn Hóa","Đã Hoàn Thành","B+","7.7","1","Tốt","2.0","1.0","3.0","0%","3","LP001GT001"});
+            db.execSQL(insert,new String[]{"NMVKT","Nhập Môn Về Kĩ Thuật","Đã Hoàn Thành","A","8.5","1","Tốt","3.0","0.0","3.0","5%","3","LP001GT001"});
+            db.execSQL(insert,new String[]{"TACNTTCB1","Tiếng Anh Công Nghệ Thông Tin Cơ Bản 1","Đã Hoàn Thành","B+","7.7","1","Tốt","3.0","0.0","3.0","10%","3","LP001GT002"});
+            db.execSQL(insert,new String[]{"DSTT","Đại Số Tuyến Tính","Đã Hoàn Thành","B+","7.9","2","Tốt","2.0","1.0","3.0","5%","3","LP001GT007"});
+            db.execSQL(insert,new String[]{"KTS","Kĩ Thuật Số","Đã Hoàn Thành","B+","7.7","2","Tốt","3.0","0.0","3.0","0%","3","LP001KTS003"});
+            db.execSQL(insert,new String[]{"KTLT","Kĩ Thuật Lập Trình","Đã Hoàn Thành","A","8.7","2","Tốt","2.0","1.0","3.0","25%","3","LP001KTLT009"});
+            db.execSQL(insert,new String[]{"KTCTMLN","Kinh Tế Chính Trị Mác-Lênin","Đã Hoàn Thành","C+","5.7","2","Trung Bình","3.0","0.0","3.0","10%","3","LP001KTCTMLN001"});
+            db.execSQL(insert,new String[]{"MMT","Mạng Máy Tính","Đã Hoàn Thành","A","8.7","3","Tốt","3.0","0.0","3.0","0%","3","LP003MMT003"});
+            db.execSQL(insert,new String[]{"PTTKPM","Phân Tích Thiết Kế Phần Mềm","Đã Hoàn Thành","C+","6.7","3","Tốt","2.0","1.0","3.0","5%","3","LP001PTTK009"});
+            db.execSQL(insert,new String[]{"TTHCM","Tư Tưởng Hồ Chí Minh","Đã Hoàn Thành","D+","4.7","3","Trung Bình","3.0","0.0","3.0","10%","3","LP001TT001"});
+            db.execSQL(insert,new String[]{"ANM","An Ninh Mạng","Đã Hoàn Thành","B","7","3","Tốt","2.0","1.0","3.0","5%","3","LP001AN001"});
+            db.execSQL(insert,new String[]{"PTDA","Phát Triển Dự Áń","Đã Hoàn Thành","B+","7.7","3","Tốt","3.0","0.0","3.0","0%","3","LP001KSS003"});
+            db.execSQL(insert,new String[]{"PT","Lập Trình PyThon","Đã Hoàn Thành","A","9.7","3","Tốt","2.0","1.0","3.0","25%","3","LP001KTLT009"});
 
             //sv04
             db.execSQL(insert,new String[]{"GT1","Giải Tích","Đã Hoàn Thành","B+","9.1","1","Tốt","2.0","1.0","3.0","0%","4","LP001GT001"});
