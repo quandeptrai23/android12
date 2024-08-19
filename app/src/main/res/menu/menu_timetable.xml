@@ -9,4 +9,5 @@
         android:id="@+id/action_close"
         android:title="Quay trở lại"
         app:showAsAction="never" />
+
 </menu>

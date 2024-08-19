@@ -5,15 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="BUITIENDUNG.SecondActivity">
+    tools:context="HaVanSang.SecondActivity">
 
 
     <ImageView
         android:id="@+id/img_back"
         android:layout_width="81dp"
         android:layout_height="48dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="4dp"
+
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout5"
         app:srcCompat="@drawable/back" />
@@ -22,8 +23,9 @@
         android:id="@+id/constraintLayout4"
         android:layout_width="127dp"
         android:layout_height="72dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="268dp"
+
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="284dp"
         android:background="@drawable/bg_tbc_ky"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
@@ -152,8 +154,9 @@
         android:id="@+id/constraintLayout2"
         android:layout_width="127dp"
         android:layout_height="74dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="64dp"
+
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="80dp"
         android:background="@drawable/bg_tbc_ky"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
@@ -172,14 +175,15 @@
 
         <TextView
             android:id="@+id/e111"
+
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:layout_marginBottom="4dp"
             android:gravity="center"
             android:text="..."
-            android:textSize="22dp"
-            android:layout_width="50dp"
             android:textColor="#7330E8"
+            android:textSize="22dp"
             android:textStyle="bold"
 
             app:layout_constraintBottom_toBottomOf="parent"
@@ -226,8 +230,9 @@
         android:id="@+id/constraintLayout5"
         android:layout_width="129dp"
         android:layout_height="76dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="368dp"
+
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="384dp"
         android:background="@drawable/bg_tbc_ky"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
@@ -265,7 +270,8 @@
         android:id="@+id/constraintLayout6"
         android:layout_width="127dp"
         android:layout_height="71dp"
-        android:layout_marginStart="52dp"
+
+        android:layout_marginStart="44dp"
         android:background="@drawable/bg_tbc_ky"
         app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
         app:layout_constraintTop_toTopOf="@+id/constraintLayout3">
@@ -284,15 +290,16 @@
 
         <TextView
             android:id="@+id/e444"
-            android:text="..."
-            android:textSize="22dp"
+
             android:layout_width="50dp"
-            android:textColor="#7330E8"
-            android:textStyle="bold"
-            android:gravity="center"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginBottom="4dp"
+            android:gravity="center"
+            android:text="..."
+            android:textColor="#7330E8"
+            android:textSize="22dp"
+            android:textStyle="bold"
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -302,10 +309,10 @@
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="164dp"
         android:text="Trung Bình Chung Từng Kỳ"
         android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
 
@@ -313,11 +320,12 @@
         android:id="@+id/constraintLayout3"
         android:layout_width="130dp"
         android:layout_height="75dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="168dp"
+
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/bg_tbc_ky"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
         <TextView
             android:id="@+id/textView24"
@@ -348,9 +356,11 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/constraintLayout7"
         android:layout_width="128dp"
         android:layout_height="70dp"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="48dp"
         android:background="@drawable/bg_tbc_ky"
         app:layout_constraintStart_toEndOf="@+id/constraintLayout4"
         app:layout_constraintTop_toTopOf="@+id/constraintLayout4">
@@ -387,10 +397,11 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="129dp"
         android:layout_height="76dp"
-        android:layout_marginStart="180dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/bg_tbc_ky"
-        app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
-        app:layout_constraintTop_toTopOf="@+id/constraintLayout5">
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout5"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout7">
 
 
         <TextView

@@ -141,7 +141,6 @@ public class DBHelper extends SQLiteOpenHelper {
         }
     }
 
-    // table Thời khoá biểu
     private void createTableThoiKhoaBieu(SQLiteDatabase db){
         try{
             String tblThoiKhoaBieu = "CREATE TABLE tblThoiKhoaBieu" +

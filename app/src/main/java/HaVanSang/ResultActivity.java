@@ -30,15 +30,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.android12.R;
-////////////////////////////////////
-//import BUITIENDUNG.THongKeActivity;
 
 public class ResultActivity extends AppCompatActivity {
     private ListView listView;
     private Spinner spinner;
     RegistedSubjectAdapter adapter;
     private Button btnThoat,btn_TBC;
-    private RegistedSubjectObject[] arrMonDangKy_all,arrMonDangKy1,arrMonDangKy2,arrMonDangKy3,arrMonDangKy4,arrMonDangKy5,arrMonDangKy6;
+    private RegistedSubjectObject[] arrMonDangKy_all,arrMonDangKy1,arrMonDangKy2,arrMonDangKy3,arrMonDangKy4,arrMonDangKy5,arrMonDangKy6,arrMonDangKy7,arrMonDangKy8;
     private ResultObject[] arrChiTiet;
     private RegistedSubjectObject[] arrNew;
     private ArrayAdapter arrayAdapter1;
@@ -54,19 +52,17 @@ public class ResultActivity extends AppCompatActivity {
         setSupportActionBar(myToolbar);
         //vd4 set back button
         ActionBar actionBar = getSupportActionBar();
-        String tab = "";
-        for (int i = 0; i < 8; i++) {
-            tab += "\t";
-        }
-        actionBar.setTitle(tab+"Theo dõi kết quả học tập");
+        actionBar.setTitle("Theo dõi kết quả học tập");
+        actionBar.setDisplayHomeAsUpEnabled(true);  // Hiển thị mũi tên quay lại
+
         listView=findViewById(R.id.lv);
         spinner=findViewById(R.id.sp);
         btn_TBC=findViewById(R.id.btnTBC);
-        String[] arrKy=new String[]{" Tất cả"," 1"," 2","3"," 4"," 5"," 6"};
-         arrayAdapter1=new ArrayAdapter(ResultActivity.this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,arrKy);
+        String[] arrKy=new String[]{"Tất cả","   1","   2","   3","   4","   5","   6","   7","   8"};
+        arrayAdapter1=new ArrayAdapter(ResultActivity.this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,arrKy);
         arrayAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(arrayAdapter1);
-         clickSpinner();
+        clickSpinner();
         Intent intent = getIntent();
         arrMonDangKy_all = (RegistedSubjectObject[]) intent.getSerializableExtra("data_all");
         arrChiTiet = (ResultObject[]) intent.getSerializableExtra("data10");
@@ -76,6 +72,8 @@ public class ResultActivity extends AppCompatActivity {
         arrMonDangKy4 = (RegistedSubjectObject[]) intent.getSerializableExtra("data4");
         arrMonDangKy5 = (RegistedSubjectObject[]) intent.getSerializableExtra("data5");
         arrMonDangKy6 = (RegistedSubjectObject[]) intent.getSerializableExtra("data6");
+        arrMonDangKy7 = (RegistedSubjectObject[]) intent.getSerializableExtra("data7");
+        arrMonDangKy8 = (RegistedSubjectObject[]) intent.getSerializableExtra("data8");
         adapter=new RegistedSubjectAdapter(this,arrMonDangKy_all);
         listView.setAdapter(adapter);
         int count=arrChiTiet.length;
@@ -102,7 +100,7 @@ public class ResultActivity extends AppCompatActivity {
             float tong1, tong2, tong3, tong4, tong5, tong6, tong7, tong8, tong;
             tong1 = tong2 = tong3 = tong4 = tong5 = tong6 = tong7 = tong8 = tong = 0.0f;
             float tin,t1,t2,t3,t4,t5,t6,t7,t8;
-                    tin = t1 =t2= t3 = t4 = t5 = t6 = t7 = t8 = tong = 0.0f;
+            tin = t1 =t2= t3 = t4 = t5 = t6 = t7 = t8 = tong = 0.0f;
             //context Menu
             for(int i=0;i<arrChiTiet.length;i++){
                 tong+=(arrChiTiet[i].getDiemTongKetSo()*arrChiTiet[i].getTinChi());
@@ -188,8 +186,8 @@ public class ResultActivity extends AppCompatActivity {
     private void thongKe() {
         int SA,SBB,SB,SCC,SC,SDD,SD,SF;
         SA=SBB=SB=SCC=SC=SDD=SD=SCC=SC=SF=0;
-        int TA,TB,TBB,TC,TCC,TDD,TD,TF;
-        TA=TB=TBB=TC=TCC=TDD=TD=TF=0;
+        double TA,TB,TBB,TC,TCC,TDD,TD,TF;
+        TA=TB=TBB=TC=TCC=TDD=TD=TF=0.0;
         for (int i=0;i<arrMonDangKy_all.length;i++){
             if (arrMonDangKy_all[i].getDiemTongKetChu().equals("A")){
                 SA++;
@@ -213,14 +211,14 @@ public class ResultActivity extends AppCompatActivity {
                 SF++;
             }
         }
-        TA=(SA)/arrMonDangKy_all.length;
-        TB=(SB)/arrMonDangKy_all.length;
-        TC=(SC)/arrMonDangKy_all.length;
-        TD=(SD)/arrMonDangKy_all.length;
-        TF=(SF)/arrMonDangKy_all.length;
-        TBB=(SBB)/arrMonDangKy_all.length;
-        TCC=(SCC)/arrMonDangKy_all.length;
-        TDD=(SDD)/arrMonDangKy_all.length;
+        TA=SA*100.0/arrMonDangKy_all.length;
+        TB=SB*100.0/arrMonDangKy_all.length;
+        TC=SC*100.0/arrMonDangKy_all.length;
+        TD=SD*100.0/arrMonDangKy_all.length;
+        TF=SF*100.0/arrMonDangKy_all.length;
+        TBB=SBB*100.0/arrMonDangKy_all.length;
+        TCC=SCC*100.0/arrMonDangKy_all.length;
+        TDD=SDD*100.0/arrMonDangKy_all.length;
 ///////////////////////////////////////////////////////////////////////////////////////////////
 //        Intent intent9=new Intent(ResultActivity.this, THongKeActivity.class);
         Intent intent9=new Intent(ResultActivity.this, StatisticalActivity.class);
@@ -234,7 +232,6 @@ public class ResultActivity extends AppCompatActivity {
         intent9.putExtra("SDD",SDD);
 
         intent9.putExtra("TA",TA);
-
         intent9.putExtra("TB",TB);
         intent9.putExtra("TC",TC);
         intent9.putExtra("TD",TD);
@@ -248,7 +245,6 @@ public class ResultActivity extends AppCompatActivity {
 
     private void onclickMenu() {
         registerForContextMenu(btn_TBC);
-
     }
 
     private void clickSpinner() {
@@ -267,6 +263,10 @@ public class ResultActivity extends AppCompatActivity {
                     arrNew=arrMonDangKy4;
                 }else if (position==5){
                     arrNew=arrMonDangKy5;
+                }else if (position==7){
+                    arrNew=arrMonDangKy7;
+                }else if (position==8){
+                    arrNew=arrMonDangKy8;
                 }else{
                     arrNew=arrMonDangKy6;
                 }
@@ -297,7 +297,7 @@ public class ResultActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-              int i=0;
+                int i=0;
                 RegistedSubjectObject t=adapter.getItem(position);
                 while (i<c){
                     if (t.getTenMonDangKy().equals(arrChiTiet[i].getTenMonDangKy())){
@@ -384,6 +384,12 @@ public class ResultActivity extends AppCompatActivity {
         ok_btn = (Button) alertCustomDialog.findViewById(R.id.ok_btn_id);
         final  AlertDialog dialog = alertDialog.create();
         int id = item.getItemId();
+
+        if (item.getItemId() == android.R.id.home) {
+            // Xử lý khi nhấn nút mũi tên
+            finish();
+            return true;
+        }
         if (id==R.id.action_report) {
             dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             dialog.show();
@@ -400,10 +406,6 @@ public class ResultActivity extends AppCompatActivity {
                     Toast.makeText(ResultActivity.this, "Cảm ơn bạn đã phản hồi.Báo cáo đã được gửi đến nhà phát triển.", Toast.LENGTH_SHORT).show();
                 }
             });
-            return true;
-        }
-        else if (id==R.id.action_close) {
-            finish();
             return true;
         }
         else
