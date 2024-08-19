@@ -14,6 +14,8 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunnerArguments["clearPackageData"] = "false"
+        testInstrumentationRunnerArguments["noReset"] = "true"
     }
 
     buildTypes {
@@ -40,4 +42,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    androidTestImplementation(libs.androidx.test.rules)  // Thêm alias cho ActivityTestRule
+    androidTestImplementation(libs.androidx.test.runner)
+    androidTestImplementation(libs.espresso.intents)
 }
