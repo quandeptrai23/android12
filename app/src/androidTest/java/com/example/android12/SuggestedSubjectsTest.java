@@ -50,7 +50,7 @@ public class SuggestedSubjectsTest {
     @Test
     public void testLoginSuccessAndNavigateToSuggestedSubjects() {
         // Nhập thông tin đăng nhập đúng
-        onView(withId(R.id.editUsername)).perform(typeText("vmq"), closeSoftKeyboard());
+        onView(withId(R.id.editUsername)).perform(typeText("lvc"), closeSoftKeyboard());
         onView(withId(R.id.editPassword)).perform(typeText("123"), closeSoftKeyboard());
 
         // Nhấn nút Đăng nhập
@@ -74,7 +74,7 @@ public class SuggestedSubjectsTest {
     @Test
     public void testWidgetsInitializationInSuggestedSubjects() {
         // Nhập thông tin đăng nhập đúng
-        onView(withId(R.id.editUsername)).perform(typeText("vmq"), closeSoftKeyboard());
+        onView(withId(R.id.editUsername)).perform(typeText("lvc"), closeSoftKeyboard());
         onView(withId(R.id.editPassword)).perform(typeText("123"), closeSoftKeyboard());
 
         // Nhấn nút Đăng nhập
@@ -92,7 +92,7 @@ public class SuggestedSubjectsTest {
     @Test
     public void testSpinnerAdapterInSuggestedSubjects() {
         // Nhập thông tin đăng nhập đúng
-        onView(withId(R.id.editUsername)).perform(typeText("vmq"), closeSoftKeyboard());
+        onView(withId(R.id.editUsername)).perform(typeText("lvc"), closeSoftKeyboard());
         onView(withId(R.id.editPassword)).perform(typeText("123"), closeSoftKeyboard());
 
         // Nhấn nút Đăng nhập
@@ -109,7 +109,7 @@ public class SuggestedSubjectsTest {
     @Test
     public void testUpdateDateInSuggestedSubjects() {
         // Nhập thông tin đăng nhập đúng
-        onView(withId(R.id.editUsername)).perform(typeText("vmq"), closeSoftKeyboard());
+        onView(withId(R.id.editUsername)).perform(typeText("lvc"), closeSoftKeyboard());
         onView(withId(R.id.editPassword)).perform(typeText("123"), closeSoftKeyboard());
 
         // Nhấn nút Đăng nhập
@@ -125,7 +125,7 @@ public class SuggestedSubjectsTest {
     @Test
     public void testListViewPopulationInSuggestedSubjects() {
         // Nhập thông tin đăng nhập đúng
-        onView(withId(R.id.editUsername)).perform(typeText("vmq"), closeSoftKeyboard());
+        onView(withId(R.id.editUsername)).perform(typeText("lvc"), closeSoftKeyboard());
         onView(withId(R.id.editPassword)).perform(typeText("123"), closeSoftKeyboard());
 
         // Nhấn nút Đăng nhập
